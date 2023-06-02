@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --main-background: hsl(0, 0%, 90%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --key-background: hsl(185, 42%, 37%);
+  --key-shadow: hsl(185, 58%, 25%);
+
+  --special-key-background: hsl(25, 98%, 40%);
+
+  --other-key-background: hsl(45, 7%, 89%);
+  --other-key-shadow: hsl(35, 11%, 61%);
+
+  --text-color: hsl(60, 10%, 19%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-background);
+}
+.calculatordiv {
+  background-color: transparent;
+  width: 450px;
+  height: 580px;
+}
+.firstdiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  align-content: center;
+  color: var(--text-color);
+  padding-inline: 20px;
+}
+input {
+  border: none;
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  direction: rtl;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--screen-background);
+  color: var(--text-color);
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
+.displaydiv {
+  margin-bottom: 20px;
+}
+.keypaddiv {
+  display: flex;
+  gap: 20px;
+  width: 450px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  background-color: var(--keypad-background);
+}
+.mari {
+  display: flex;
+  gap: 20px;
+}
+.numberdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+button {
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 30px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--other-key-background);
+  color: var(--text-color);
+}
+button:hover {
+  background-color: white;
+}
+
+.triplediv {
+  display: flex;
+  gap: 20px;
+}
+.lastkeys {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+.equal {
+  width: 190px;
+  font-size: 20px;
+  background-color: var(--special-key-background);
+  color: var(--white-color);
+  font-weight: bold;
+}
+.equal:hover {
+  background-color: hsl(25, 100%, 59%);
+}
+
+.reset {
+  width: 190px;
+  font-size: 20px;
+  background-color: var(--key-shadow);
+  color: var(--white-color);
+  font-weight: bold;
+}
+.reset:hover {
+  background-color: var(--key-background);
+}
+
+.delete {
+  font-size: 20px;
+  background-color: var(--key-shadow);
+  color: var(--white-color);
+  font-weight: bold;
+}
+.delete:hover {
+  background-color: var(--key-background);
+}
+
+.otherkey {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 500px) {
+  .main {
+    align-items: unset;
+    padding-top: 30px;
+  }
+  .calculatordiv {
+    background-color: transparent;
+    width: 350px;
+    height: 300px;
+  }
+  .keypaddiv {
+    width: 350px;
+  }
+  button {
+    width: 60px;
+  }
+  .equal {
+    width: 150px;
+  }
+  .reset {
+    width: 150px;
+  }
+}
